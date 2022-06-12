@@ -1,0 +1,60 @@
+﻿<Window x:Class="NET_ININ4_PR2._2_z5.WidokProduktu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NET_ININ4_PR2._2_z5"
+        mc:Ignorable="d"
+        
+        Title="WidokProduktu"
+        Height="300"
+        Width="500"
+        FontSize="24"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label
+            >Nazwa</Label>
+        <TextBlock
+            Grid.Column="1"
+            Text="{Binding XPath=nazwa}"
+            />
+        
+        <Label
+            Grid.Row="1"
+            >Cena</Label>
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="{Binding XPath=cena}"
+            />
+        
+        <Label
+            Grid.Row="2"
+            >Kraj pochodzenia</Label>
+        <TextBlock
+            Grid.Row="2"
+            Grid.Column="1"
+            Text="{Binding XPath=kraj_pochodzenia}"
+            />
+
+        <Label
+            Grid.Row="3"
+            >Grupa produktu</Label>
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="1"
+            Text="{Binding XPath=../../@nazwa}"
+            />
+    </Grid>
+</Window>

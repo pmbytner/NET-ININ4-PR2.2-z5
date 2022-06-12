@@ -17,14 +17,14 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <ListBox
-            Name="ListaGrup"
+            Name="ListaProduktów"
             DataContext="{DynamicResource DaneXML}"
-            ItemsSource="{Binding XPath=grupa}"
+            ItemsSource="{Binding XPath=grupa/produkty/produkt}"
             >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock
-                        Text="{Binding XPath=@nazwa}"
+                        Text="{Binding XPath=nazwa}"
                         />
                 </DataTemplate>
             </ListBox.ItemTemplate>

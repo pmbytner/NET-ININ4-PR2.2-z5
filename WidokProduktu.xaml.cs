@@ -10,28 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Xml;
 
 namespace NET_ININ4_PR2._2_z5
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy WidokProduktu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WidokProduktu : Window
     {
-        public MainWindow()
+        public WidokProduktu(System.Xml.XmlNode produkt)
         {
+            DataContext = produkt;
             InitializeComponent();
-        }
-
-        private void Szczegóły(object sender, RoutedEventArgs e)
-        {
-            ListBox lista = (ListBox)this.FindName("ListaProduktów");
-            XmlNode produkt = (XmlNode)lista.SelectedItem;
-            if (produkt != null)
-                new WidokProduktu(produkt).Show();
         }
     }
 }

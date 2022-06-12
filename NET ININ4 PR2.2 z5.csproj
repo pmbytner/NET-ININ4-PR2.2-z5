@@ -58,6 +58,9 @@
     <Compile Include="WidokGrupy.xaml.cs">
       <DependentUpon>WidokGrupy.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WidokProduktu.xaml.cs">
+      <DependentUpon>WidokProduktu.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +74,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="WidokGrupy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WidokProduktu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="NET_ININ4_PR2._2_z5.WidokGrupy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NET_ININ4_PR2._2_z5"
+        mc:Ignorable="d"
+        
+        Title="WidokGrupy"
+        Height="600"
+        Width="500"
+        FontSize="24"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock
+            Text="{Binding XPath=opis}"
+            />
+        <DataGrid
+            Grid.Row="1"
+            ItemsSource="{Binding XPath=produkty/produkt
+            }"
+            AutoGenerateColumns="False"
+            >
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Nazwa"
+                    Binding="{Binding XPath=nazwa}"
+                    />
+                <DataGridTextColumn
+                    Header="Cena"
+                    Binding="{Binding XPath=cena}"
+                    />
+                <DataGridTextColumn
+                    Header="Kraj Pochodzenia"
+                    Binding="{Binding XPath=kraj_pochodzenia}"
+                    />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
